@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables, fucntions, mixins, includes.
+// -----------------------------------------------------------------------------
+//variaveis
+$cor-preto: #6c6d6e;
+$cor-cinza-claro: #f1f1f1;
+$cor-cinza: #d6d6d6;
+$cor-cinza-escuro: #575757;
+$cor-azul-escuro: #13008b;
+$cor-azul: #00839b;
+$cor-amarelo: #efab00;
+
+//mixins
+
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $align: stretch,
+  $justify: start,
+  $gap: 0
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  gap: $gap;
+}
+
+//extend
+
+%titulo {
+  font-size: 4.88rem;
+  line-height: 1;
+}
+
+%subtitulo {
+  font-size: 2.76rem;
+  line-height: 1.2;
+  font-weight: 700;
+}

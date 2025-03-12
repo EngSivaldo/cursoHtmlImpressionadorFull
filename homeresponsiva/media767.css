@@ -1,0 +1,98 @@
+@media all and (max-width: 47.9375em) {
+  h1 {
+    font-size: 43.75%;
+  }
+
+  /* global */
+  .secao {
+    padding: 4.88rem 2rem;
+  }
+
+  /* Hero*/
+  .secao-hero {
+    background-image: url("https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-01-mobile.png");
+
+    & .container-hero {
+      flex-flow: column;
+      max-width: 83rem;
+
+      & .hero-botoes {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+      & h1,
+      & .hero-paragrafo {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* conteudos */
+
+.secao-conteudos {
+  background-image: url("https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/6500ece03c16520e44ba5837_bg-conteudos-mobile.png");
+  background-position: bottom;
+  background-size: auto;
+  background-color: white;
+
+  & .container-conteudos {
+    flex-flow: column;
+    gap: 3.2rem;
+
+    & .img-conteudos {
+      left: 0;
+      max-width: 47.8rem;
+    }
+
+    & .conteudos-coluna {
+      order: -1;
+
+      & .conteudos-titulo {
+        max-width: 45.5rem;
+      }
+    }
+
+    & .caixas-cursos-hashtag {
+      justify-content: center;
+    }
+  }
+}
+
+/*Diferenciais*/
+
+.secao-diferenciais {
+  & .container-diferenciais {
+    & .caixa-titulo-diferenciais {
+      flex-flow: column;
+      text-align: center;
+      align-items: center;
+      gap: 2.5rem;
+      padding-bottom: 14.9rem;
+      & .diferenciais-p {
+        text-align: inherit;
+      }
+      & .caixa-diferenciais-h2 {
+        border-bottom: solid 0.3rem #ffb20f;
+        border-left: none;
+        flex-flow: row;
+      }
+    }
+
+    & .caixa-restante-diferenciais {
+      & .bloco-itens-diferenciais {
+        flex-flow: column;
+        gap: 7.63rem;
+      }
+
+      & .diferenciais-empresas {
+        & .diferenciais-h3-empresas {
+          text-align: center;
+        }
+        & .bloco-imagens-diferenciais {
+          padding: 0 3.12rem;
+        }
+      }
+    }
+  }
+}

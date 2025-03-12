@@ -1,0 +1,37 @@
+// sass\components\_botao.scss
+@use "../abstracts/variables";
+
+.botao {
+  background-color: variables.$cor-amarelo;
+}
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.botao {
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  border-width: 2px;
+  border-color: #000;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.92rem;
+
+  &:hover {
+    border-width: 3px;
+  }
+
+  &--amarelo {
+    background-color: variables.$cor-amarelo;
+    border-color: darken(variables.$cor-amarelo, 30%);
+    color: white;
+  }
+
+  &--centralizado {
+    align-self: center;
+  }
+}

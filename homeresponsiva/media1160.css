@@ -1,0 +1,15 @@
+@media all and (max-width: 72.5em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  /*Conteúdos gratuitos */
+  .img-conteudos {
+    max-width: 41vw;
+  }
+
+  /*footer*/
+  .conatainer-rodape {
+    width: 100%;
+  }
+}

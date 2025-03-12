@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+  </head>
+  <body>
+    <button class="js-abrir">Abrir</button>
+
+    <dialog>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit provident
+        eligendi molestiae repellat ullam, cum ipsum cupiditate? Ipsam
+        recusandae aliquid voluptate? Laboriosam esse cupiditate qui nobis nam
+        nesciunt quisquam ducimus!
+      </p>
+      <button class="js-fechar">Fechar</button>
+    </dialog>
+
+    <script>
+      document
+        .querySelector(".js-abrir")
+        .addEventListener("click", function () {
+          document.querySelector("dialog").showModal();
+        });
+
+      document
+        .querySelector(".js-fechar")
+        .addEventListener("click", function () {
+          document.querySelector("dialog").close();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@use "../abstracts/variables"; // Certifique-se de que o caminho está correto
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: variables.$cor-preto; // Use a variável com o namespace
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+.titulo {
+  @extend %titulo;
+  font-weight: 500;
+  color: red;
+
+  & span {
+    color: variables.$cor-azul;
+    font-weight: 600;
+  }
+}
+
+.subtitulo {
+  @extend %subtitulo;
+
+  & span {
+    color: variables.$cor-amarelo;
+  }
+}

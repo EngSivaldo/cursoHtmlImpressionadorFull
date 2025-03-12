@@ -1,0 +1,68 @@
+* {
+  background-color: rgb(223, 223, 223);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+  color: #404040;
+  font-family: "Montserrat", sans-serif;
+}
+
+.lista-nao-ordenada {
+}
+
+/*cabeçalho */
+
+.item-lista-cabecalho a {
+  color: rgb(92, 90, 88);
+  font-size: 14px;
+  font-family: "Motserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* secao hero*/
+h1 {
+  font: 35px;
+  font-weight: 600;
+}
+
+.hero-p {
+  font-size: 19px;
+}
+
+.botao {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.gratuitos-h2 {
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.gratuito-realce {
+  color: blueviolet;
+  font-weight: 600;
+}
+
+.gartuitos-h3 {
+  font-size: 23px;
+  color: rgb(17, 122, 214);
+  font-weight: 700;
+}
+.gratuito-ietm-lista,
+.gratuito-link-lista {
+  font-size: 19px;
+  text-decoration: none;
+}
+
+/* secao diferenciais */
