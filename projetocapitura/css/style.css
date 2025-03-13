@@ -86,7 +86,7 @@ strong {
 }
 .botao--amarelo {
   background-color: #efab00;
-  border-color: rgb(86, 61.5313807531, 0);
+  border-color: rgb(167.3, 119.7, 0);
   color: white;
 }
 .botao--centralizado {
@@ -193,6 +193,88 @@ strong {
 .container--rodape a {
   text-decoration: none;
   color: inherit;
+}
+
+.popup-aberto .popup {
+  display: flex;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.925);
+  backdrop-filter: blur(2.5px);
+  z-index: 1000;
+}
+.popup__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  gap: 2.5rem;
+  position: relative;
+  gap: 2.5rem;
+  width: 50rem;
+  background-color: #fff1d6;
+  padding: 3.12rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.15);
+}
+.popup__container .titulo {
+  font-size: 2.76rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+.popup__container .titulo .realce {
+  background-color: #d6e4ff;
+  border-radius: 2rem;
+  padding: 0 1.02rem;
+}
+.popup__container__textos {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  gap: 1.6rem;
+}
+.popup__container .botao:link, .popup__container .botao:visited {
+  align-self: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: #d6e4ff;
+  border-radius: 2.5rem;
+  padding: 0.82rem 3.12rem;
+  font-weight: 700;
+  border: 2px solid #49546b;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+}
+.popup__container .botao:hover, .popup__container .botao:active {
+  border-width: 3px;
+}
+.popup__container .fechar {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #d6e4ff;
+  border: 2px solid #49546b;
+  font-weight: 700;
+  font-size: 1.92rem;
+}
+.popup__container .fechar:hover {
+  border-width: 1px;
 }
 
 .secao--hero {

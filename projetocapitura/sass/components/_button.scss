@@ -1,5 +1,6 @@
 // sass\components\_botao.scss
-@use "../abstracts/variables";
+@use "sass:color";
+@use "../abstracts/variables" as variables;
 
 .botao {
   background-color: variables.$cor-amarelo;
@@ -27,7 +28,7 @@
 
   &--amarelo {
     background-color: variables.$cor-amarelo;
-    border-color: darken(variables.$cor-amarelo, 30%);
+    border-color: color.scale(variables.$cor-amarelo, $lightness: -30%);
     color: white;
   }
 
