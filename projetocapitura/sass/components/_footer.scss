@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as variables;
+
+.rodape {
+  padding: 4.88rem 2rem;
+
+  &__logo {
+    width: 3.73rem;
+    right: 3.73rem;
+  }
+}
+
+.container--rodape {
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+
+  @include variables.respond(small) {
+    justify-content: center;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

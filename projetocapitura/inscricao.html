@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="popup-aberto">
+  <body class="popup--aberto">
     <section class="secao secao--hero">
       <div class="container container--hero">
         <div class="caixa">
@@ -59,7 +59,9 @@
             </li>
           </ul>
           <p class="caixa__subtitulo">100% Online e Gratuito</p>
-          <button class="botao botao--amarelo">Quero participar</button>
+          <button class="botao botao--amarelo js-botao">
+            Quero participar
+          </button>
         </div>
         <div class="div-lira">
           <img
@@ -87,8 +89,9 @@
         <div class="cabecalho-titulo">
           <img
             src="https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cef84825a7b7d2f1aef5e3_%5BELEMENTO%5D%20seta%20dupla.png"
-            alt=""
+            alt="icone seta"
             width="30px"
+            class="img-seta"
           />
 
           <h2 class="titulo">Siga o<span> passo a passo!</span></h2>
@@ -179,11 +182,12 @@
         <div class="cabecalho-titulo">
           <img
             src="https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cef98e3d834a18ba77139f_%5BELEMENTO%5D%20seta-dupla.png"
-            alt=""
+            alt="icone seta"
+            class="img-seta"
             width="30px"
           />
 
-          <h2 class="titulo">
+          <h2 class="titulo titulo--pequeno">
             Nesse <span>evento gratuito</span> você vai apender:
           </h2>
         </div>
@@ -222,7 +226,7 @@
           </a>
         </div>
 
-        <button class="botao botao--amarelo botao--centralizado">
+        <button class="botao botao--amarelo botao--centralizado js-botao">
           Quero assistir as aulas de graça!
         </button>
       </div>
@@ -284,34 +288,35 @@
     </footer>
 
     <div class="popup">
-      <div class="popup__container">
-        <div class="titulo">
-          Você sabia que temos
-          <span class="realce">conteúdos gratuitos</span> no site?
+      <form class="popup__container">
+        <div class="popup__inputs">
+          <input
+            type="text"
+            class="popup__input popup__input--amarelo"
+            placeholder="seu primeiro nome"
+            required
+          />
+          <input
+            type="text"
+            class="popup__input popup__input--amarelo"
+            placeholder="seu melhor email-"
+            required
+          />
+          <input
+            type="text"
+            class="popup__input popup__input--amarelo"
+            placeholder="Insira seu Watsap com DDD"
+          />
         </div>
 
-        <div class="popup__textos">
-          <p>
-            Todos os dias colocamos <b>conteúdos novos</b> no Blog da Hashtag.
-            Esses conteúdos são de temas variados, como: Excel, VBA, Power BI,
-            Power Apps, SQL, Python, JavaScript e Ciência de Dados.
-          </p>
+        <button class="botao botao--amarelo">Quero saber mais</button>
 
-          <p>
-            Se você quiser dar uma olhada nesses conteúdos, basta
-            <b> clicar no botão abaixo. </b>
-          </p>
+        <div class="popup__fechar popup__fechar--amarelo js-botao">
+          <p>x</p>
         </div>
-
-        <a
-          href="https://www.hashtagtreinamentos.com/blog"
-          target="_blank"
-          class="botao"
-          >Quero saber mais!</a
-        >
-
-        <div class="fechar">x</div>
-      </div>
+      </form>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

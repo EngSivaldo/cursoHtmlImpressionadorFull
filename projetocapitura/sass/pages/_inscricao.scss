@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as variables;
 
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the incricao page.
@@ -23,6 +23,11 @@
     padding-bottom: 0;
     padding-top: 21rem;
     margin-top: -10rem;
+
+    @include variables.respond(small) {
+      padding-top: 32rem;
+      margin-top: -24rem;
+    }
   }
 
   &--disclaimer {
@@ -37,30 +42,67 @@
     position: relative;
     align-items: end;
     width: 100%;
+
+    @include variables.respond(small) {
+      flex-flow: column;
+      align-items: center;
+      gap: 3.12rem;
+    }
   }
 
   &--passo,
   &--aprender {
-    @include variables.flex($direction: column, $gap: 6rem, $align: start);
+    @include variables.flex($direction: column, $gap: 3rem, $align: start);
+    margin: 10px;
+
+    @include variables.respond(small) {
+      gap: 2.5rem;
+    }
   }
 
   &--quem {
     position: relative;
     width: 100%;
+
+    @include variables.respond(small) {
+      flex-flow: column;
+      align-items: center;
+      gap: 3.12rem;
+    }
   }
 }
 
 .grid {
   &--passo {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 6rem;
+    row-gap: 4rem;
     column-gap: 3rem;
+
+    @include variables.respond(small) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 3.12rem;
+      column-gap: 2rem;
+    }
+
+    @include variables.respond(tiny) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &--aprender {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 4.5rem;
     column-gap: 4.5rem;
+
+    @include variables.respond(small) {
+      row-gap: 2rem;
+    }
+
+    @include variables.respond(tiny) {
+      align-self: center;
+      grid-template-columns: 1fr;
+      gap: 3.12rem;
+    }
   }
 }
 
@@ -68,9 +110,16 @@
   position: absolute;
   transform: translate(10%);
   display: flex;
-  height: 60rem;
+  width: 70%;
   right: 0;
   bottom: 0;
+
+  @include variables.respond(small) {
+    position: relative;
+    transform: none;
+    width: 100%;
+    max-width: 53rem;
+  }
 }
 
 /**/
@@ -82,6 +131,17 @@
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
+
+  @include variables.respond(small) {
+    grid-row: auto;
+    grid-column: 1 / span 2;
+    max-width: 27.5rem;
+    justify-self: center;
+  }
+
+  @include variables.respond(tiny) {
+    grid-column: auto;
+  }
 }
 
 .cabecalho-titulo {
@@ -95,6 +155,10 @@
   &:hover {
     transform: scale(1.05);
   }
+
+  @include variables.respond(tiny) {
+    max-width: 48rem;
+  }
 }
 
 .quem {
@@ -103,6 +167,11 @@
   max-width: 50%;
   width: 100%;
   margin-bottom: 6.1rem;
+
+  @include variables.respond(small) {
+    max-width: 53rem;
+    margin-bottom: 0rem;
+  }
 
   &__cabecalho {
     border-left: solid 4px variables.$cor-amarelo;
@@ -124,4 +193,21 @@
   width: 45%;
   right: 0;
   bottom: 0;
+
+  @include variables.respond(small) {
+    position: relative;
+    transform: none;
+    width: 40rem;
+  }
+}
+
+.img-seta {
+  width: 4.1rem;
+  @include variables.respond(small) {
+    width: 3.5rem;
+  }
+
+  @include variables.respond(tiny) {
+    width: 3rem;
+  }
 }

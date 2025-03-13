@@ -2,6 +2,8 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+@use "../abstracts/variables" as variables;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +12,18 @@
 
 html {
   font-size: 62.5%;
+
+  @include variables.respond(big) {
+    font-size: 56.25%;
+  }
+
+  @include variables.respond(medium) {
+    font-size: 50%;
+  }
 }
 
 img {
   max-width: 100%;
+  width: 100%;
   display: block;
 }

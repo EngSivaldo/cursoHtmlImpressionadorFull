@@ -1,11 +1,17 @@
+@use "../abstracts/variables" as variables;
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .secao {
   display: flex;
   flex-flow: column;
-
+  overflow: hidden;
   padding: 6.1rem 2rem;
+
+  @include variables.respond(tiny) {
+    padding: 3.9rem 2rem;
+  }
 }
 
 .container {

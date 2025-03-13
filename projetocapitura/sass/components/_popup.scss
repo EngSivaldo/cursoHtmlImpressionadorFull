@@ -1,0 +1,106 @@
+@use "../abstracts/variables" as variables;
+.popup--aberto {
+  & .popup {
+    display: flex;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.925);
+  backdrop-filter: blur(2.5px);
+  z-index: 1000; // Adicione esta linha
+
+  &__inputs {
+    @include variables.flex($direction: column, $gap: 0.82rem);
+  }
+  &__input {
+    border: solid 2px;
+    border-radius: 5rem;
+    padding: 1.28rem;
+    font-size: inherit;
+    color: inherit;
+
+    &--amarelo {
+      border-color: variables.$cor-amarelo;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 1rem rgb(red, 0.5);
+    }
+  }
+
+  // &__botao {
+  //   @extend %botao--amarelo;
+  // }
+
+  &__fechar {
+    @include variables.flex(
+      $align: center,
+      $justify: center,
+      $direction: column,
+      $gap: 1.6rem
+    );
+    cursor: pointer;
+
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    transform: translate(50%, -50%);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #d6e4ff;
+    border: 2px solid #49546b;
+    font-weight: 700;
+    font-size: 1.92rem;
+
+    &:hover {
+      border-width: 1px;
+    }
+
+    &--amarelo {
+      background-color: variables.$cor-amarelo;
+      border-color: (variables.$cor-amarelo, 30%);
+      color: #fff;
+    }
+  }
+
+  &__container {
+    @include variables.flex($direction: column, $gap: 2rem);
+    position: relative;
+    background-color: #fff;
+    width: 50rem;
+    padding: 3.9rem;
+    border-radius: 2.5rem;
+    box-shadow: inset 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.15);
+
+    & .titulo {
+      font-size: 2.76rem;
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+
+      & .realce {
+        background-color: #d6e4ff;
+        border-radius: 2rem;
+        padding: 0 1.02rem;
+      }
+    }
+
+    &__textos {
+      @include variables.flex($direction: column, $gap: 1.6rem);
+    }
+
+    & .fechar {
+    }
+  }
+}
