@@ -76,8 +76,19 @@
   display: block !important;
 }
 
+/*features*/
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
 /*CSS proprio*/
 
 .img-hero {
   width: 314px;
+}
+
+.feature-icon {
+  --bs-primary-rgb: 66, 76, 136;
 }
